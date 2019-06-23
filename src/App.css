@@ -1,0 +1,203 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif
+}
+
+.w3-row-padding img {
+    margin-bottom: 12px
+}
+
+.main-title {
+    margin-left: 120px;
+}
+
+.main-subtitle {
+    margin-left: 120px;
+}
+
+.page-subtitle {
+    text-align: center;
+}
+
+.main-photo {
+    max-width: 100%;
+    max-height: 615px;
+    margin-left: 120px;
+}
+
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {
+    width: 120px;
+    background: #222;
+}
+
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {
+    margin-left: 120px;
+    overflow: none;
+}
+
+.fa-facebook-official:hover {
+    color: #3b5998;
+    cursor: pointer;
+}
+
+.fa-instagram:hover {
+    color: #bc2a8d;
+    cursor: pointer;
+}
+
+.fa-twitter:hover {
+    color: #1da1f2;
+    cursor: pointer;
+}
+
+.mobile-nav-button.shorter-text {
+    max-width: 13%;
+}
+
+.mobile-nav-button.longer-text {
+    max-width: 29%;
+}
+
+.fa-linkedin:hover {
+    color: #0077B5;
+    cursor: pointer;
+}
+
+.fa-github:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+.page-content {
+    margin-top: 40px;
+}
+
+.desktop-navbar {
+    margin-top: -40px;
+    overflow: hidden;
+}
+
+.home-header {
+    padding-bottom: 32px;
+}
+
+.footer .home-link {
+    cursor: pointer;
+    margin-left: 120px;
+}
+
+.navbar-links {
+    margin-left: 120px;
+}
+
+.about-me-container {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.about-me-photo {
+    max-width: 45%;
+}
+
+.about-me-text {
+    float: right;
+}
+
+.page-header {
+    text-align: center;
+    font-weight: 400;   
+    font-size: 55px;
+}
+
+.cv-picture {
+    max-width: 100%;
+}
+
+.contact-section {
+    border: 3px #fff solid;
+    padding: 10px;
+}
+
+.contact-section-text {
+    text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+    .about-me-photo-desktop {
+        display: none;
+    }
+}
+
+@media only screen and (max-height: 456px) {
+    .desktop-navbar i {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .main-title {
+        margin-left: 0;
+    }
+
+    #mobile-navbar {
+        max-width: 100%;
+    }
+    
+    .main-subtitle {
+        margin-left: 0;
+    }
+
+    .main-photo {
+        margin-left: 0;
+    }
+
+    #main {
+        margin-left: 0
+    }
+
+    .about-me-container {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .footer .home-link {
+        margin-left: 0px;
+    }
+    
+    .navbar-links {
+        margin-left: 0px;
+    }
+
+    .cv-picture {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    .cv-picture-container {
+        padding-top: 5px;
+    }
+
+    .about-me-photo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 60%;
+    }
+
+    .about-me-photo-mobile {
+        margin-left: 20%;
+    }
+
+    .contact-section {
+        margin-bottom: 10px;
+    }
+}
