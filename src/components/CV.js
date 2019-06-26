@@ -73,7 +73,7 @@ function CV() {
                 <h6><b>Graduated June 2018 with Honours of the First-Class</b></h6>
                 <p>
                   At Heriot-Watt I covered a vast number of areas of Computer Science.  I covered mathematics and logic, report writing, software development,
-                  web development, database management and more. [<a href="grades/year4.html">See all courses and grades</a>].
+                  web development, database management and more.
                 </p>
                 <p>
                   I recieved a certificate of merit for my third year grades.  This is awarded to students who have an overall average of 70% or above
@@ -88,7 +88,7 @@ function CV() {
                 <h6 className="w3-text-blue"><i className="fa fa-calendar fa-fw w3-margin-right"></i>2008 - 2014</h6>
                 <p>
                   I spent 6 years at West Calder high school. In my final year I was a prefect and a 'buddy' for the new first years.
-                  I achieved 8 Highers, including 5 A grades [<a href="grades/highschool.html">See Grades</a>].
+                  I achieved 8 Highers, including 5 A grades.
                 </p>
                 <hr />
               </div>
