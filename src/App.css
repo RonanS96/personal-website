@@ -120,6 +120,10 @@ h6 {
     max-width: 100%;
 }
 
+.cv-picture.spinner {
+    height: 300px;
+}
+
 .contact-section {
     border: 3px #fff solid;
     padding: 10px;
@@ -129,9 +133,17 @@ h6 {
     text-align: center;
 }
 
+.desktop-nav-button.active {
+    background-color: #000;
+}
+
 @media only screen and (max-width: 992px) {
     .about-me-photo-desktop {
         display: none;
+    }
+
+    .main-photo {
+        max-width: 70%;
     }
 }
 
@@ -142,8 +154,13 @@ h6 {
 }
 
 @media only screen and (max-width: 600px) {
-    .main-title {
+    .w3-jumbo.main-title {
         margin-left: 0;
+        font-size: 40px !important;
+    }
+
+    .main-photo {
+        max-width: 100%;
     }
 
     #mobile-navbar {
@@ -182,6 +199,10 @@ h6 {
         width: 50%;
     }
 
+    .cv-picture.spinner {
+        height: auto;
+    }
+
     .cv-picture-container {
         padding-top: 5px;
     }
@@ -199,5 +220,10 @@ h6 {
 
     .contact-section {
         margin-bottom: 10px;
+    }
+
+    .mobile-nav-button.active {
+        background-color: #ccc;
+        color: #000;
     }
 }
