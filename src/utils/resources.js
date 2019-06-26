@@ -59,7 +59,7 @@ export function returnAllResources() {
             {
                 title: "Trello",
                 description: "A really useful project management tool.",
-                url: ""
+                url: "https://trello.com/en"
             },
             {
                 title: "Visual Studio",
