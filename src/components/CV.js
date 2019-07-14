@@ -129,7 +129,7 @@ class CV extends React.Component {
 
   loader() {
     return (
-      <img className="cv-picture spinner" src="images/loading-spinner.gif"></img>
+      <img className="cv-picture spinner" alt="Me" src="images/loading-spinner.gif"></img>
     )
   }
 }

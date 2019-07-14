@@ -1,5 +1,5 @@
 import React from "react";
-import Markdown from "react-remarkable";
+import ReactMarkdown from "react-markdown";
 
 class About extends React.Component {
   constructor(props) {
@@ -32,7 +32,7 @@ class About extends React.Component {
             {this.aboutMePhoto()}
           </div>
           <div className="w3-col m6 about-me-text">
-            <Markdown source={this.state.aboutMeText} />
+            <ReactMarkdown source={this.state.aboutMeText} />
             <div className="contact-section">
               <h2>Contact</h2>
               <div className="contact-section-text">
