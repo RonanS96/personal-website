@@ -30,7 +30,7 @@ export class HomePage extends React.Component {
 
   loader() {
     return (
-      <img className="main-photo spinner" src="images/loading-spinner.gif"></img>
+      <img className="main-photo spinner" alt="Me" src="images/loading-spinner.gif"></img>
     )
   }
 
