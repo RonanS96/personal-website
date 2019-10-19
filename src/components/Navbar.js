@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
+import { BrowserRouter as Router, Route, NavLink, Switch } from "react-router-dom";
 import About from "./About";
 import CV from "./CV";
 import HomePage from "./HomePage";
@@ -70,12 +70,14 @@ class Navbar extends React.Component {
                         </div>
                     </div>
                     <div className="page-content">
-                        <Route path="/resources" exact component={Resources} />
-                        <Route path="/projects" exact component={Projects} />
-                        <Route path="/about" exact component={About} />
-                        <Route path="/home" exact component={HomePage} />
-                        <Route path="/cv" exact component={CV} />
-                        <Route path="/" exact component={HomePage} />
+                        <Switch>
+                            <Route path="/resources" exact component={Resources} />
+                            <Route path="/projects" exact component={Projects} />
+                            <Route path="/about" exact component={About} />
+                            <Route path="/home" exact component={HomePage} />
+                            <Route path="/cv" exact component={CV} />
+                            <Route path="/" exact component={HomePage} />
+                        </Switch>
                     </div>
                 </div>
             </Router>
