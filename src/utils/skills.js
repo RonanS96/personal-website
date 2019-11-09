@@ -1,0 +1,33 @@
+export function getSkills () {
+    return [
+        "React",
+        "Redux",
+        "TypeScript",
+        "JavaScript", 
+        "Java",
+        "Python",
+        "HTML5",
+        "CSS",
+        "Sass",
+        "Bootstrap",
+        "W3.CSS",
+        "NodeJS",
+        "MySQL",
+        "MongoDB",
+        "Java Spring",
+        "PHP",
+        "CakePHP",
+        "SML New Jersey",
+        "Prolog",
+        "C",
+        "Squarespace",
+        "Google Docs",
+        "Microsoft Office",
+        "Git",
+        "GitHub",
+        "GitLab",
+        "XML",
+        "JSON",
+        "STRIPS/PDDL"
+    ];
+}

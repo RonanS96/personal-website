@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, NavLink, Switch } from "react-router-dom";
+import * as classNames from 'classnames';
+
 import About from "./About";
 import CV from "./CV";
 import HomePage from "./HomePage";
@@ -11,7 +13,14 @@ const PROJECTS_PATH = "/projects";
 const RESOURCES_PATH = "/resources";
 const CV_PATH = "/cv";
 
-class Navbar extends React.Component {
+class Navbar extends React.PureComponent {
+    constructor(props) {
+        super(props);
+        this.state = {
+            mobileNavbarOpen: false
+        };
+    }
+
     render() {
         return (
             <Router>
@@ -59,15 +68,63 @@ class Navbar extends React.Component {
                             <p>CV</p>
                         </NavLink>
                     </nav>
-
                     {/* Mobile Navbar */}
-                    <div className="w3-top w3-hide-large w3-hide-medium" id="mobile-navbar">
-                        <div className="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-                            <NavLink to={ABOUT_ME_PATH} className="w3-bar-item w3-button mobile-nav-button longer-text">ABOUT</NavLink>
-                            <NavLink to={PROJECTS_PATH} className="w3-bar-item w3-button mobile-nav-button longer-text">PROJECTS</NavLink>
-                            <NavLink to={RESOURCES_PATH} className="w3-bar-item w3-button mobile-nav-button longer-text">RESOURCES</NavLink>
-                            <NavLink to={CV_PATH} className="w3-bar-item w3-button mobile-nav-button shorter-text">CV</NavLink>
+                    <div className="topnav w3-hide-large w3-hide-medium">
+                        <div className={classNames("mobile-navbar", this.state.mobileNavbarOpen ? "open" : "closed")}>
+                            <NavLink
+                                to="/home"
+                                className={"mobile-nav-link first"}
+                                activeClassName="active"
+                                onClick={this.closeMobileNavbar}
+                            >
+                                <div>Ronan Smith</div>
+                            </NavLink>
+                            <div className="dropdown-links">
+                                <NavLink
+                                    to={ABOUT_ME_PATH}
+                                    className={"mobile-nav-link"}
+                                    activeClassName="active"
+                                    onClick={this.closeMobileNavbar}
+                                >
+                                    <i className="fa fa-user w3-large"></i>
+                                    <div>About Me</div>
+                                </NavLink>
+                                <NavLink
+                                    to={PROJECTS_PATH}
+                                    className={"mobile-nav-link"}
+                                    activeClassName="active"
+                                    onClick={this.closeMobileNavbar}
+                                >
+                                    <i className="fa fa-desktop w3-large"></i>
+                                    <div>Projects</div>
+                                </NavLink>
+                                <NavLink
+                                    to={RESOURCES_PATH}
+                                    className={"mobile-nav-link"}
+                                    activeClassName="active"
+                                    onClick={this.closeMobileNavbar}
+                                >
+                                    <i className="fa fa-code w3-large"></i>
+                                    <div>Resources</div>
+                                </NavLink>
+                                <NavLink
+                                    to={CV_PATH}
+                                    className={"mobile-nav-link"}
+                                    activeClassName="active"
+                                    onClick={this.closeMobileNavbar}
+                                >
+                                    <i className="fa fa-file w3-large"></i>
+                                    <div>CV</div>
+                                </NavLink>
+                            </div>
                         </div>
+                        <a href="javascript:void(0)" className="icon" onClick={this.toggleMobileMenu}>
+                            {this.state.mobileNavbarOpen ? (
+                                    <i className="fa fa-times"></i>
+                                ) : (
+                                    <i className="fa fa-bars"></i>
+                            )}
+                        </a>
                     </div>
                     <div className="page-content">
                         <Switch>
@@ -82,6 +139,18 @@ class Navbar extends React.Component {
                 </div>
             </Router>
         );
+    }
+
+    toggleMobileMenu = () => {
+        this.setState({
+            mobileNavbarOpen: !this.state.mobileNavbarOpen
+        });
+    }
+
+    closeMobileNavbar = () => {
+        this.setState({
+            mobileNavbarOpen: false
+        });
     }
 
     getNavButtonClassName = () => {
