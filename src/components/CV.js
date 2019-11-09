@@ -1,5 +1,7 @@
 import React from "react";
-import Img from "react-image";
+
+import * as me from "../images/me4.jpg";
+import { getSkills } from "../utils/skills";
 
 class CV extends React.Component {
   render() {
@@ -10,9 +12,9 @@ class CV extends React.Component {
             <div className="w3-third">
               <div className="w3-white w3-text-grey w3-card-4">
                 <div className="w3-display-container cv-picture-container">
-                  <Img
+                  <img
                     className="cv-picture"
-                    src="me4.jpg"
+                    src={me}
                     alt="Ronan Smith"
                     loader={this.loader()}
                   />
@@ -28,14 +30,9 @@ class CV extends React.Component {
                   <p className="w3-large w3-text-theme"><b><i className="fa fa-globe fa-fw w3-margin-right w3-text-blue"></i>Skills</b></p>
                   <br />
                   <p>
-                    <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">Java</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">Python</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">TypeScript</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">JavaScript</span> 
-                    <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">HTML5</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">CSS</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">Sass</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">Bootstrap</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">W3.CSS</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">NodeJS</span>
-                    <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">React</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">Redux</span>
-                    <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">MySQL</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">MongoDB</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">Java Spring</span>
-                    <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">PHP</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">CakePHP</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">SML New Jersey</span>
-                    <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">Prolog</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">C</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">Squarespace</span>
-                    <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">Google Docs</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">Microsoft Office</span>
-                    <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">Git</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">GitHub</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">GitLab</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">XML</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">JSON</span> <span className="w3-tag w3-light-grey w3-small w3-margin-bottom">STRIPS/PDDL</span>
+                    {getSkills().map(skill =>
+                      <span key={skill} className="w3-tag w3-light-grey w3-small w3-margin-bottom">{skill}</span>
+                    )}
                   </p>
                   <br />
                 </div>

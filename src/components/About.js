@@ -1,6 +1,8 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
 
+import * as me from "../images/me_grad.jpg";
+
 class About extends React.Component {
   constructor(props) {
     super(props);
@@ -52,7 +54,7 @@ class About extends React.Component {
 
   aboutMePhoto() {
     return (
-      <img className="w3-col m6 about-me-photo" src="me_grad.jpg" alt="Graduation" />
+      <img className="w3-col m6 about-me-photo" src={me} alt="Graduation" />
     );
   }
 }

@@ -162,10 +162,6 @@ h6 {
     .main-photo {
         max-width: 100%;
     }
-
-    #mobile-navbar {
-        max-width: 100%;
-    }
     
     .main-subtitle {
         margin-left: 0;
@@ -222,8 +218,41 @@ h6 {
         margin-bottom: 10px;
     }
 
-    .mobile-nav-button.active {
-        background-color: #ccc;
-        color: #000;
-    }
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+        position: relative;
+      }
+      
+      .topnav a {
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        display: block;
+      }
+      
+      .topnav a.icon {
+        background: #222;
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .mobile-navbar.open .dropdown-links{
+          display: block;
+      }
+      .mobile-navbar.closed .dropdown-links {
+          display: none;
+      }
+
+      .mobile-nav-link {
+          background: #222;
+          text-align: center;
+      }
+      .mobile-nav-link.first {
+        background: #222;
+        text-align: left;
+      }
 }
